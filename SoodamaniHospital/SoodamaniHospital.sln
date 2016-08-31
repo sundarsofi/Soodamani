@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoodamaniHospital", "SoodamaniHospital\SoodamaniHospital.csproj", "{AC45BD79-AEB8-49E4-AAEA-2B5F8F07844E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.Core", "Mvvm.Core\Mvvm.Core.csproj", "{A956F2B5-BBC0-4053-937C-3375A690314C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AC45BD79-AEB8-49E4-AAEA-2B5F8F07844E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC45BD79-AEB8-49E4-AAEA-2B5F8F07844E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC45BD79-AEB8-49E4-AAEA-2B5F8F07844E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A956F2B5-BBC0-4053-937C-3375A690314C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A956F2B5-BBC0-4053-937C-3375A690314C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A956F2B5-BBC0-4053-937C-3375A690314C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A956F2B5-BBC0-4053-937C-3375A690314C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
