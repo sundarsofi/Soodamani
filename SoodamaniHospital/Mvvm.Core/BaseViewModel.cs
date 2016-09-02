@@ -9,14 +9,44 @@ using System.Windows;
 namespace Mvvm.Core
 {
     public abstract class BaseViewModel : NotifiableObject
-        {
-        private static bool? _isInDesignMode;
+    {
+        #region Properties
 
-        public BaseViewModel(IEventAggregator eventAggregator)
-            :base(eventAggregator)
+        /// <summary>
+        /// Gets or sets the EventAggregator
+        /// </summary>
+        public IEventAggregator EventAggregator { get; set; }
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        ///  Initialize a new object for BaseViewModel
+        /// </summary>
+        /// <param name="eventAggregator"></param>
+        public BaseViewModel(IEventAggregator eventAggregator):this()
         {
+            this.EventAggregator = eventAggregator;
         }
 
+        /// <summary>
+        /// Initialize a new object for BaseViewModel
+        /// </summary>
+        public BaseViewModel()
+        {
+
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Raised when ViewModel's property is changed
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="propertyName"></param>
+        /// <param name="oldValue"></param>
+        /// <param name="newValue"></param>
         protected virtual void RaisePropertyChanged<T>(string propertyName, T oldValue = default(T), T newValue = default(T))
         {
             if (string.IsNullOrEmpty(propertyName))
@@ -27,6 +57,13 @@ namespace Mvvm.Core
             RaisePropertyChanged(propertyName);
         }
 
+        /// <summary>
+        /// Raised when ViewModel's property is changed
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="propertyExpression"></param>
+        /// <param name="oldValue"></param>
+        /// <param name="newValue"></param>
         protected virtual void RaisePropertyChanged<T>(Expression<Func<T>> propertyExpression, T oldValue, T newValue)
         {
             var handler = PropertyChangedHandler;
@@ -42,6 +79,7 @@ namespace Mvvm.Core
             }
         }
 
+        
         protected bool Set<T>(Expression<Func<T>> propertyExpression, ref T field, T newValue)
         {
             if (EqualityComparer<T>.Default.Equals(field, newValue))

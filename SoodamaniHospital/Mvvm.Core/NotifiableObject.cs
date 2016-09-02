@@ -13,13 +13,14 @@ namespace Mvvm.Core
 {
     public class NotifiableObject : INotifyPropertyChanged, INotifyPropertyChanging
     {
-        public NotifiableObject(IEventAggregator eventAggregator)
+        
+
+        public NotifiableObject()
         {
-            EventAggregator = eventAggregator;
+
         }
-
-        public IEventAggregator EventAggregator { get; set; }
-
+        
+      
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected PropertyChangedEventHandler PropertyChangedHandler
