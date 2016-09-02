@@ -6,12 +6,6 @@
         xmlns:MHcontrols="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:SoodamaniHospital"
         mc:Ignorable="d"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Title="SoodaMani Hospital" Height="350" Width="525"> 
-=======
-=======
->>>>>>> a3a7a0fe2966654886e8bbd91b3e143e66f7f69d
         SaveWindowPosition="True"
         BorderBrush="{DynamicResource AccentColorBrush}"     
         GlowBrush="{DynamicResource AccentColorBrush}"    
@@ -25,16 +19,21 @@
             <GradientStop Color="SteelBlue" Offset="0.767"/>
         </LinearGradientBrush>
     </Window.Background>-->
->>>>>>> origin/master
-    <Grid>
+    <Grid Height="500">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Soodmani Hospital "/>
-        <TabControl  x:Name="Container" Background="Transparent"  Grid.Row="2">
-            
-        </TabControl>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Soodmani Hospital "/>
+        <StackPanel Margin="0,10" Height="30" Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Create Patient" Margin="10,0" Width="100" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button Content="Existing Patient" Margin="10,0" Width="100" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        </StackPanel>
+        <MHcontrols:MetroAnimatedTabControl Grid.Row="2">
+            <MHcontrols:MetroTabItem Header="tab1"/>
+            <MHcontrols:MetroTabItem Header="tab2"/>
+            <MHcontrols:MetroTabItem Header="tab3"/>
+        </MHcontrols:MetroAnimatedTabControl>
     </Grid>
 </MHcontrols:MetroWindow>
