@@ -7,8 +7,11 @@
         xmlns:local="clr-namespace:SoodamaniHospital"
         mc:Ignorable="d"
 <<<<<<< HEAD
+<<<<<<< HEAD
         Title="SoodaMani Hospital" Height="350" Width="525"> 
 =======
+=======
+>>>>>>> a3a7a0fe2966654886e8bbd91b3e143e66f7f69d
         SaveWindowPosition="True"
         BorderBrush="{DynamicResource AccentColorBrush}"     
         GlowBrush="{DynamicResource AccentColorBrush}"    
