@@ -19,7 +19,7 @@
             <GradientStop Color="SteelBlue" Offset="0.767"/>
         </LinearGradientBrush>
     </Window.Background>-->
-    <Grid Height="500">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -30,7 +30,7 @@
             <Button Content="Create Patient" Margin="10,0" Width="100" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button Content="Existing Patient" Margin="10,0" Width="100" Style="{StaticResource AccentedSquareButtonStyle}"/>
         </StackPanel>
-        <MHcontrols:MetroAnimatedTabControl Grid.Row="2">
+        <MHcontrols:MetroAnimatedTabControl Grid.Row="2" ItemsSource="{Binding ViewCollection}">
             <MHcontrols:MetroTabItem Header="tab1"/>
             <MHcontrols:MetroTabItem Header="tab2"/>
             <MHcontrols:MetroTabItem Header="tab3"/>
