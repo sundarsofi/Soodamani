@@ -6,7 +6,23 @@
         xmlns:MHcontrols="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:SoodamaniHospital"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="SoodaMani Hospital" Height="350" Width="525"> 
+=======
+        SaveWindowPosition="True"
+        BorderBrush="{DynamicResource AccentColorBrush}"     
+        GlowBrush="{DynamicResource AccentColorBrush}"    
+        WindowTransitionsEnabled="False"                
+        BorderThickness="1"       
+        Title="SoodaMani Hospital" Height="350" Width="525">
+    <!--<Window.Background>
+        <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+            <GradientStop Color="SteelBlue" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset="0.367"/>
+            <GradientStop Color="SteelBlue" Offset="0.767"/>
+        </LinearGradientBrush>
+    </Window.Background>-->
+>>>>>>> origin/master
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
